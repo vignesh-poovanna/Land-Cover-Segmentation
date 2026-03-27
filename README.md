@@ -20,7 +20,9 @@ The core mathematical architecture used for this task is a Convolutional Neural 
 ### Convolution in Action
 Below is an animated visualization generated directly from the testing array showing a 3x3 convolution kernel sliding geometrically across a subset of the Sentinel-2 Red Band. This represents how the feature detectors interpret 2D visual structures in the initial layer of the network.
 
-![Convolution Sliding Animation](my_custom_convolution.gif)
+<p align="center">
+  <img src="my_custom_convolution.gif" width="400" alt="Convolution Sliding Animation">
+</p>
 
 ### Final Output Comparison
 After training on the dataset, the model's multi-class predictions on entirely unseen validation patches were visualized against the true scientific ground labels encoded by the satellite.
