@@ -6,6 +6,10 @@ The trained model achieved a test accuracy of 93.7% on completely unseen geograp
 
 ## Project Architecture
 
+<p align="center">
+  <img src="assets/model.h5.png" alt="U-Net Architecture Node Graph">
+</p>
+
 The core mathematical architecture used for this task is a Convolutional Neural Network (CNN). Specifically, an Encoder-Decoder structure known as a U-Net was built sequentially using TensorFlow and Keras.
 
 1. **Preprocessing**: Sentinel-2 data (R20m spatial resolution) was stacked to create multi-spectral images consisting of 9 distinct spectral bands (including Near-Infrared for isolating vegetation).
@@ -21,13 +25,13 @@ The core mathematical architecture used for this task is a Convolutional Neural 
 Below is an animated visualization generated directly from the testing array showing a 3x3 convolution kernel sliding geometrically across a subset of the Sentinel-2 Red Band. This represents how the feature detectors interpret 2D visual structures in the initial layer of the network.
 
 <p align="center">
-  <img src="my_custom_convolution.gif" width="400" alt="Convolution Sliding Animation">
+  <img src="assets/my_custom_convolution.gif" width="400" alt="Convolution Sliding Animation">
 </p>
 
 ### Final Output Comparison
 After training on the dataset, the model's multi-class predictions on entirely unseen validation patches were visualized against the true scientific ground labels encoded by the satellite.
 
-![Model Output Comparison](output.png)
+![Model Output Comparison](assets/output.png)
 
 ## Technologies Used
 - **TensorFlow / Keras**: Used for constructing, compiling, and training the U-Net structure.
